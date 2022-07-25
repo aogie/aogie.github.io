@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<AnchorPane prefHeight="474.0" prefWidth="1019.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo3.HelloController">
+   <children>
+      <AnchorPane prefHeight="470.0" prefWidth="1014.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="474.0" prefWidth="1014.0" spacing="20.0">
+               <AnchorPane prefHeight="492.0" prefWidth="1014.0">
+                   <children>
+                       <VBox layoutX="860.0" layoutY="91.0" prefHeight="284.0" prefWidth="120.0" spacing="15.0">
+                           <children>
+                               <TextField fx:id="tfAccount" prefHeight="26.0" prefWidth="72.0" />
+                               <TextField fx:id="tfCompany" layoutX="10.0" layoutY="10.0" prefHeight="26.0" prefWidth="72.0" />
+                               <TextField fx:id="tfBookie" layoutX="10.0" layoutY="10.0" prefHeight="26.0" prefWidth="72.0" />
+                               <TextField fx:id="tfBot" layoutX="10.0" layoutY="10.0" prefHeight="26.0" prefWidth="72.0" />
+                               <TextField fx:id="tfChannel" layoutX="10.0" layoutY="10.0" prefHeight="26.0" prefWidth="72.0" />
+                               <TextField fx:id="tfRule" layoutX="10.0" layoutY="10.0" prefHeight="26.0" prefWidth="72.0" />
+                           <CheckBox fx:id="stateLogin" mnemonicParsing="false" onAction="#handleCheckBox" prefHeight="31.0" prefWidth="52.0" text="Login" />
+                           </children>
+                       </VBox>
+                       <VBox alignment="CENTER_LEFT" layoutX="799.0" layoutY="65.0" prefHeight="331.0" prefWidth="62.0" spacing="24.0">
+                           <children>
+                               <Label text="Account" />
+                               <Label layoutX="10.0" layoutY="10.0" text="Company" />
+                               <Label layoutX="10.0" layoutY="10.0" text="Bookie" />
+                               <Label layoutX="10.0" layoutY="28.0" text="Bot" />
+                               <Label layoutX="10.0" layoutY="28.0" text="Channel" />
+                               <Label layoutX="10.0" layoutY="45.0" text="Rule" />
+                               <Label layoutX="10.0" layoutY="63.0" text="State" />
+                           </children>
+                       </VBox>
+                       <HBox alignment="CENTER" layoutX="799.0" layoutY="397.0" prefHeight="50.0" prefWidth="194.0" spacing="10.0">
+                           <children>
+                               <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="26.0" prefWidth="55.0" text="Add" />
+                               <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#handleButtonAction" text="Delete" />
+                               <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#handleButtonAction" text="Update" />
+                           </children>
+                       </HBox>
+                     <TabPane layoutX="18.0" layoutY="6.0" prefHeight="440.0" prefWidth="754.0" tabClosingPolicy="UNAVAILABLE" tabMinHeight="40.0" tabMinWidth="80.0">
+                       <tabs>
+                         <Tab text="Account">
+                           <content>
+                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="422.0" prefWidth="754.0">
+                                    <children>
+                                           <TableView fx:id="accountTableView" layoutY="-1.0" onMouseClicked="#handleMouseAction" prefHeight="407.0" prefWidth="754.0">
+                                               <columns>
+                                                   <TableColumn fx:id="accountCol" prefWidth="98.40000915527344" text="Account" />
+                                                   <TableColumn fx:id="companyCol" prefWidth="135.3999481201172" text="Company" />
+                                                   <TableColumn fx:id="bookieCol" prefWidth="109.20001220703125" text="Bookie" />
+                                                   <TableColumn fx:id="botCol" prefWidth="111.0" text="Bot" />
+                                                   <TableColumn fx:id="channelCol" prefWidth="106.60003662109375" text="Channel" />
+                                                   <TableColumn fx:id="ruleCol" maxWidth="300.0" prefWidth="75.800048828125" text="Rule" />
+                                                   <TableColumn fx:id="stateCol" maxWidth="300.0" prefWidth="112.4000244140625" text="State" />
+                                               </columns>
+                                           </TableView>
+                                    </children>
+                                 </AnchorPane>
+                           </content>
+                         </Tab>
+                           <Tab text="Dashboard">
+                             <content>
+                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="242.0" prefWidth="548.0">
+                                    <children>
+                                       <TableView fx:id="dashboardTableView" layoutY="-1.0" onMouseClicked="#handleMouseAction" prefHeight="400.0" prefWidth="754.0">
+                                         <columns>
+                                           <TableColumn fx:id="accountColDashboard" prefWidth="216.20000648498535" text="Account" />
+                                           <TableColumn fx:id="bookieColDashboard" prefWidth="142.39996337890625" text="Bookie" />
+                                             <TableColumn fx:id="channelColDashboard" prefWidth="236.00003051757812" text="Channel" />
+                                             <TableColumn fx:id="ruleColDashboard" prefWidth="162.4000244140625" text="Rule" />
+                                         </columns>
+                                       </TableView>
+                                    </children></AnchorPane>
+                             </content>
+                           </Tab>
+                           <Tab text="Company">
+                               <content>
+                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="242.0" prefWidth="548.0">
+                                       <children>
+                                           <TableView fx:id="companyTableView" layoutX="59.0" prefHeight="400.0" prefWidth="362.0">
+                                               <columns>
+                                                   <TableColumn fx:id="accountColCompany" prefWidth="176.99999618530273" text="Account" />
+                                                   <TableColumn fx:id="companyColCompany" prefWidth="182.99998474121094" text="Company" />
+                                               </columns>
+                                           </TableView>
+                                       </children></AnchorPane>
+                               </content>
+                           </Tab>
+                           <Tab text="Bookie">
+                               <content>
+                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="242.0" prefWidth="548.0">
+                                       <children>
+                                           <TableView fx:id="bookieTableView" layoutX="151.0" prefHeight="400.0" prefWidth="362.0">
+                                               <columns>
+                                                   <TableColumn fx:id="accountColBookie" prefWidth="176.99999618530273" text="Account" />
+                                                   <TableColumn fx:id="bookieColBookie" prefWidth="182.99998474121094" text="Bookie" />
+                                               </columns>
+                                           </TableView>
+                                       </children></AnchorPane>
+                               </content>
+                           </Tab>
+                           <Tab text="Bot">
+                               <content>
+                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="242.0" prefWidth="548.0">
+                                       <children>
+                                           <TableView fx:id="botTableView" layoutX="244.0" prefHeight="400.0" prefWidth="362.0">
+                                               <columns>
+                                                   <TableColumn fx:id="accountColBot" prefWidth="176.99999618530273" text="Account" />
+                                                   <TableColumn fx:id="botColBot" prefWidth="182.99998474121094" text="Bot" />
+                                               </columns>
+                                           </TableView>
+                                       </children></AnchorPane>
+                               </content>
+                           </Tab>
+                           <Tab text="Channel">
+                               <content>
+                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="242.0" prefWidth="548.0">
+                                       <children>
+                                           <TableView fx:id="channelTableView" layoutX="337.0" prefHeight="400.0" prefWidth="362.0">
+                                               <columns>
+                                                   <TableColumn fx:id="accountColChannel" prefWidth="176.99999618530273" text="Account" />
+                                                   <TableColumn fx:id="channelColChannel" prefWidth="182.99998474121094" text="Channel" />
+                                               </columns>
+                                           </TableView>
+                                       </children></AnchorPane>
+                               </content>
+                           </Tab>
+                           <Tab text="Rule">
+                               <content>
+                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="242.0" prefWidth="548.0">
+                                       <children>
+                                           <TableView fx:id="ruleTableView" layoutX="452.0" prefHeight="400.0" prefWidth="301.0">
+                                               <columns>
+                                                   <TableColumn fx:id="accountColRule" prefWidth="162.80001831054688" text="Account" />
+                                                   <TableColumn fx:id="ruleColRule" prefWidth="138.0" text="Rule" />
+                                               </columns>
+                                           </TableView>
+                                       </children></AnchorPane>
+                               </content>
+                           </Tab>
+
+                       </tabs>
+                     </TabPane>
+                     <Line endX="100.0" layoutX="896.0" layoutY="390.0" startX="-100.0" />
+                     <Button fx:id="btnReset" layoutX="928.0" layoutY="344.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="26.0" prefWidth="51.0" text="Reset" />
+                   </children>
+               </AnchorPane>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
